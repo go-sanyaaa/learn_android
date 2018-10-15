@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LearnAndroid</string>
+    <string name="about_scroll_vew">A view group that allows the view hierarchy placed within it to be scrolled.
+        Scroll view may have only one direct child placed within it. To add multiple views within the scroll view,
+        make the direct child you add a view group, for example LinearLayout, and place additional views within that LinearLayout.
+        \n\nScroll view supports vertical scrolling only. For horizontal scrolling, use HorizontalScrollView instead.
+        \n\nNever add a RecyclerView or ListView to a scroll view. Doing so results in poor user interface performance and a poor user experience.
+        \n\nFor vertical scrolling, consider NestedScrollView instead of scroll view which offers greater user interface flexibility and support for the material design scrolling patterns.</string>
 </resources>

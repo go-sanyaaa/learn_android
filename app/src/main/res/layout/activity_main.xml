@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:gravity="center_horizontal"
+      android:paddingStart="14dp"
+      android:paddingEnd="14dp">
+
+      <Button
+          android:id="@+id/btnLinearLayoutScreen"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"
+          android:text="LinearLayout"
+          android:textAllCaps="false"
+          android:padding="25dp"/>
+
+
+      <Button
+          android:id="@+id/btnRelativeLayoutScreen"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"
+          android:text="RelativeLayout"
+          android:textAllCaps="false"
+          android:padding="25dp"/>
+
+      <Button
+          android:id="@+id/btnFrameLayoutScreen"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"
+          android:text="FrameLayout"
+          android:textAllCaps="false"
+          android:padding="25dp"/>
+
+      <Button
+          android:id="@+id/btnScrollViewScreen"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"
+          android:text="ScrollView"
+          android:textAllCaps="false"
+          android:padding="25dp"/>
+
+  </LinearLayout>
+
+</ScrollView>

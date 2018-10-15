@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScrollViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/vImageInfo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="14dp"
+            android:background="#75ec73" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/vImageInfo"
+            android:layout_marginBottom="14dp"
+            android:text="@string/about_scroll_vew" />
+
+        <View
+            android:id="@+id/vImageAdditional"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="14dp"
+            android:layout_below="@+id/tvInfo"
+            android:background="#ffca5f" />
+
+        <TextView
+            android:id="@+id/tvAdditional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/vImageAdditional"
+            android:layout_below="@+id/tvInfo"
+            android:layout_marginBottom="14dp"
+            android:text="@string/about_scroll_vew" />
+
+        <View
+            android:id="@+id/vImageApi"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="14dp"
+            android:layout_below="@+id/tvAdditional"
+            android:background="#c86def" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/vImageApi"
+            android:layout_below="@+id/tvAdditional"
+            android:text="@string/about_scroll_vew" />
+
+    </RelativeLayout>
+
+</ScrollView>
