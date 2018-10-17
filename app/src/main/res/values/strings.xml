@@ -6,4 +6,15 @@
         \n\nScroll view supports vertical scrolling only. For horizontal scrolling, use HorizontalScrollView instead.
         \n\nNever add a RecyclerView or ListView to a scroll view. Doing so results in poor user interface performance and a poor user experience.
         \n\nFor vertical scrolling, consider NestedScrollView instead of scroll view which offers greater user interface flexibility and support for the material design scrolling patterns.</string>
+
+    <string name="main_card_title">Title goes here</string>
+    <string name="main_card_title_short">Title</string>
+
+    <string name="main_card_subtitle">Subtitle here</string>
+    <string name="main_card_details">Details here</string>
+    <string name="main_card_button_1">ACTION 1</string>
+    <string name="main_card_button_2">ACTION 2</string>
+    <string name="banner_ad_loading">Ads loading …</string>
+    <string name="action_settings">Настройки</string>
+
 </resources>

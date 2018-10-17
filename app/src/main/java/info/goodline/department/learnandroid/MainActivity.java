@@ -1,9 +1,14 @@
 package info.goodline.department.learnandroid;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,6 +21,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnRelativeLayoutScreen).setOnClickListener(this);
         findViewById(R.id.btnFrameLayoutScreen).setOnClickListener(this);
         findViewById(R.id.btnScrollViewScreen).setOnClickListener(this);
+        findViewById(R.id.btnCardViewScreen).setOnClickListener(this);
+        findViewById(R.id.btnWidgetsScreen).setOnClickListener(this);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("View и ViewGroup");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     @Override
@@ -35,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnScrollViewScreen:
                 intent = new Intent(this, ScrollViewActivity.class);
                 break;
+            case R.id.btnCardViewScreen:
+                intent = new Intent(this, CardViewActivity.class);
+                break;
+            case R.id.btnWidgetsScreen:
+                intent = new Intent(this, WidgetsActivity.class);
+                break;
         }
 
         if (intent == null) {
@@ -42,5 +61,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            case R.id.action_favorite:
+                Toast.makeText(this, "Favorite", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.action_search:
+                Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

@@ -19,7 +19,9 @@
         <activity android:name=".LinearLayoutActivity" />
         <activity android:name=".RelativeLayoutActivity" />
         <activity android:name=".FrameLayoutActivity" />
-        <activity android:name=".ScrollViewActivity"></activity>
+        <activity android:name=".ScrollViewActivity" />
+        <activity android:name=".CardViewActivity" />
+        <activity android:name=".WidgetsActivity"></activity>
     </application>
 
 </manifest>

@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/green_primary_dark</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="MyFlatButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/deep_purple_primary</item>
+    </style>
 </resources>

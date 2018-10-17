@@ -1,51 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:gravity="center_horizontal"
-      android:paddingStart="14dp"
-      android:paddingEnd="14dp">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-      <Button
-          android:id="@+id/btnLinearLayoutScreen"
-          android:layout_width="250dp"
-          android:layout_height="wrap_content"
-          android:text="LinearLayout"
-          android:textAllCaps="false"
-          android:padding="25dp"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingEnd="14dp"
+            android:paddingStart="14dp">
+
+            <Button
+                android:id="@+id/btnLinearLayoutScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="LinearLayout"
+                android:textAllCaps="false" />
 
 
-      <Button
-          android:id="@+id/btnRelativeLayoutScreen"
-          android:layout_width="250dp"
-          android:layout_height="wrap_content"
-          android:text="RelativeLayout"
-          android:textAllCaps="false"
-          android:padding="25dp"/>
+            <Button
+                android:id="@+id/btnRelativeLayoutScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="RelativeLayout"
+                android:textAllCaps="false" />
 
-      <Button
-          android:id="@+id/btnFrameLayoutScreen"
-          android:layout_width="250dp"
-          android:layout_height="wrap_content"
-          android:text="FrameLayout"
-          android:textAllCaps="false"
-          android:padding="25dp"/>
+            <Button
+                android:id="@+id/btnFrameLayoutScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="FrameLayout"
+                android:textAllCaps="false" />
 
-      <Button
-          android:id="@+id/btnScrollViewScreen"
-          android:layout_width="250dp"
-          android:layout_height="wrap_content"
-          android:text="ScrollView"
-          android:textAllCaps="false"
-          android:padding="25dp"/>
+            <Button
+                android:id="@+id/btnScrollViewScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="ScrollView"
+                android:textAllCaps="false" />
 
-  </LinearLayout>
+            <Button
+                android:id="@+id/btnCardViewScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="CardView"
+                android:textAllCaps="false" />
 
-</ScrollView>
+            <Button
+                android:id="@+id/btnWidgetsScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="Кнопки, переключатели и т.д."
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
