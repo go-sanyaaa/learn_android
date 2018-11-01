@@ -1,93 +1,114 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a7a6a6"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvDiscount5Percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:background="#303F9F"
-        android:text="Discount 5%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Vertical orientation:" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 3" />
 
     <TextView
-        android:id="@+id/tvDiscount15Percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tvDiscount14Percent"
-        android:layout_alignParentRight="true"
-        android:background="#FF9800"
-        android:text="Discount 15%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Horizontal orientation:" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 5" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 6" />
+    </LinearLayout>
 
 
     <TextView
-        android:id="@+id/tvDiscount4Percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tvDiscount5Percent"
-        android:background="#795548"
-        android:text="Discount 4%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Layout weight" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Button 7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 8" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/tvDiscount25Percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@id/tvDiscount50Percent"
-        android:background="#607D8B"
-        android:text="Discount 25%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Layout weight sum" />
 
-
-    <TextView
-        android:id="@+id/tvDiscount10Percent"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#009688"
-        android:text="Discount 10%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:orientation="horizontal"
+        android:weightSum="5">
 
-    <TextView
-        android:id="@+id/tvDiscount11Percent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvDiscount10Percent"
-        android:background="#9C27B0"
-        android:text="Discount 11%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="9" />
 
-    <TextView
-        android:id="@+id/tvDiscount14Percent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:background="#4CAF50"
-        android:text="Discount 14%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="11" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvDiscount50Percent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="#F44336"
-        android:text="Discount 50%"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
-
-</RelativeLayout>
-
+</LinearLayout>
