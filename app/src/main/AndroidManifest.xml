@@ -21,7 +21,11 @@
         <activity android:name=".FrameLayoutActivity" />
         <activity android:name=".ScrollViewActivity" />
         <activity android:name=".CardViewActivity" />
-        <activity android:name=".WidgetsActivity"></activity>
+        <activity android:name=".WidgetsActivity" />
+        <activity android:name=".FragmentLayoutActivity" />
+        <activity android:name=".UserListFragmetntActivity" />
+        <activity android:name=".UserListActivity" />
+        <activity android:name=".CommentsActivity"></activity>
     </application>
 
 </manifest>
