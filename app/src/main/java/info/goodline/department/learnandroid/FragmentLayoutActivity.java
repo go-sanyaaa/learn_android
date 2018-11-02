@@ -11,16 +11,28 @@ public class FragmentLayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_layout);
-        findViewById(R.id.btnUserList).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnUserListActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showUser();
+                showUserListActivity();
+            }
+        });
+
+        findViewById(R.id.btnUserListActivityFragment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showUserListFragmentActivity();
             }
         });
     }
 
-    private void showUser() {
+    private void showUserListActivity() {
         Intent intent =  new Intent(this, UserListActivity.class);
+        startActivity(intent);
+    }
+
+    private void showUserListFragmentActivity() {
+        Intent intent =  new Intent(this, UserListFragmentActivity.class);
         startActivity(intent);
     }
 }
