@@ -2,6 +2,7 @@ package info.goodline.department.learnandroid;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -21,6 +22,14 @@ public class RecyclerViewActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
+
+        RecyclerView recyclerView = findViewById(R.id.rvChatList);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // создаем адаптер
+        ChatAdapter adapter = new ChatAdapter(this, DataBaseHelper.chats);
+        // устанавливаем для списка адаптер
+        recyclerView.setAdapter(adapter);
     }
 
 

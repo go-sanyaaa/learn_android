@@ -14,6 +14,11 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/MyToolbar" />
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvChatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize" />
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="56dp"
