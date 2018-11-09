@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/vImageApi"
             android:textStyle="bold"
-            tools:text="Comment #1 from Jon" />
+            android:text="Comment #1 from Jon" />
 
         <TextView
             android:id="@+id/tvCommentOne"
@@ -51,7 +51,7 @@
             android:layout_toEndOf="@+id/vImageApi"
             android:layout_below="@+id/tvCommentOne"
             android:textStyle="bold"
-            tools:text="Comment #2 from Jon" />
+            android:text="Comment #2 from Jon" />
 
         <TextView
             android:id="@+id/tvCommentTwo"
@@ -77,7 +77,7 @@
             android:layout_toEndOf="@+id/vImageApi"
             android:layout_below="@+id/tvCommentTwo"
             android:textStyle="bold"
-            tools:text="Comment #3 from Jon" />
+            android:text="Comment #3 from Jon" />
 
         <TextView
             android:id="@+id/tvCommentThree"

@@ -91,6 +91,16 @@
                 android:textAllCaps="false" />
 
 
+            <Button
+                android:id="@+id/btnRecyclerViewScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="RecyclerView"
+                android:textAllCaps="false" />
+
+
+
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

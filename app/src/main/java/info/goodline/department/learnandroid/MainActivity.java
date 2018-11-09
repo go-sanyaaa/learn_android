@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnCardViewScreen).setOnClickListener(this);
         findViewById(R.id.btnWidgetsScreen).setOnClickListener(this);
         findViewById(R.id.btnFragmentScreen).setOnClickListener(this);
+        findViewById(R.id.btnRecyclerViewScreen).setOnClickListener(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnFragmentScreen:
                 intent = new Intent(this, FragmentLayoutActivity.class);
+                break;
+            case R.id.btnRecyclerViewScreen:
+                intent = new Intent(this, RecyclerViewActivity.class);
                 break;
         }
 

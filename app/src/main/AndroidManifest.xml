@@ -25,7 +25,9 @@
         <activity android:name=".FragmentLayoutActivity" />
         <activity android:name=".UserListFragmentActivity" />
         <activity android:name=".UserListActivity" />
-        <activity android:name=".CommentsActivity"></activity>
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".RecyclerViewActivity"
+            android:theme="@style/RecyclerViewTheme"/>
     </application>
 
 </manifest>
