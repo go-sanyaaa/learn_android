@@ -1,13 +1,18 @@
 package info.goodline.department.learnandroid;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclerViewActivity extends AppCompatActivity implements ChatAdapter.onItemClickListener {
 
@@ -27,10 +32,23 @@ public class RecyclerViewActivity extends AppCompatActivity implements ChatAdapt
         RecyclerView recyclerView = findViewById(R.id.rvChatList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Получаем данные
+        List<ChatItem> chats = new ArrayList<>(DataBaseHelper.chats);
         // создаем адаптер
-        ChatAdapter adapter = new ChatAdapter(this, DataBaseHelper.chats, this);
+        final ChatAdapter adapter = new ChatAdapter(this, chats, this);
         // устанавливаем для списка адаптер
         recyclerView.setAdapter(adapter);
+
+        FloatingActionButton fabCreateChat = findViewById(R.id.fabCreateChat);
+        fabCreateChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Получить новый чат
+                ChatItem chatItem = DataBaseHelper.createChat();
+                // Добавить его в адаптер
+                adapter.insertItem(chatItem);
+            }
+        });
     }
 
 

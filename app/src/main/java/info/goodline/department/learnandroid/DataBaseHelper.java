@@ -5,6 +5,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class DataBaseHelper {
 
@@ -68,7 +69,7 @@ public class DataBaseHelper {
                     "                          — It’s the one week of the year in which you get the chance to take…")
 
 
-            );
+    );
 
 
     public static void initDatabase() {
@@ -111,5 +112,13 @@ public class DataBaseHelper {
 
     public static List<User> getUsers() {
         return users;
+    }
+
+    public static ChatItem createChat() {
+        Random r = new Random();
+        // Получить случайное значение позиции для нового чата
+        int positionNewChat = r.nextInt(chats.size() - 1);
+        // Вернуть чат с рандомной позицией
+        return chats.get(positionNewChat);
     }
 }

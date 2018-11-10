@@ -53,4 +53,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
     public int getItemCount() {
         return chats.size();
     }
+
+    /**
+     * Метод добавления чата в список
+     * @param item - чат
+     */
+    public void insertItem(ChatItem item) {
+        // Добавить экземпляр класса ChatItem в коллекцию объектов сразу после первого элемента.
+        chats.add(1, item);
+        // Обновить адаптер. Вызывав этот метод, в списке recyclerView будет отрисовано добавление
+        // нового элемента
+        notifyItemInserted(1);
+    }
 }
