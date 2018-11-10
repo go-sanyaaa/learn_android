@@ -11,12 +11,20 @@ import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
 
+    public interface onItemClickListener {
+        void onItemClick(ChatItem item);
+    }
+
+    private onItemClickListener clickListener;
     private LayoutInflater inflater;
     private List<ChatItem> chats;
 
-    public ChatAdapter(Context context, List<ChatItem> chats) {
-        this.chats = chats;
+
+
+    public ChatAdapter(Context context, List<ChatItem> chats, onItemClickListener clickListener) {
         this.inflater = LayoutInflater.from(context);
+        this.chats = chats;
+        this.clickListener = clickListener;
     }
 
     @NonNull
@@ -28,11 +36,17 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
 
     @Override
     public void onBindViewHolder(@NonNull ChatVH chatVH, int position) {
-        ChatItem chatItem = chats.get(position);
+        final ChatItem chatItem = chats.get(position);
         chatVH.ivAvatar.setImageResource(chatItem.getAvatar());
         chatVH.tvChatTheme.setText(chatItem.getTitle());
         chatVH.tvUserName.setText(chatItem.getLastUserName());
         chatVH.tvMessage.setText(chatItem.getLastMessage());
+        chatVH.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickListener.onItemClick(chatItem);
+            }
+        });
     }
 
     @Override

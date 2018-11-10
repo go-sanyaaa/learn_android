@@ -7,8 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.widget.Toast;
 
-public class RecyclerViewActivity extends AppCompatActivity {
+public class RecyclerViewActivity extends AppCompatActivity implements ChatAdapter.onItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // создаем адаптер
-        ChatAdapter adapter = new ChatAdapter(this, DataBaseHelper.chats);
+        ChatAdapter adapter = new ChatAdapter(this, DataBaseHelper.chats, this);
         // устанавливаем для списка адаптер
         recyclerView.setAdapter(adapter);
     }
@@ -40,4 +41,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onItemClick(ChatItem item) {
+        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+    }
 }
