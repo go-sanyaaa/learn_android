@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import info.goodline.department.learnandroid.recycler_view.RecyclerViewExamplesActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, FragmentLayoutActivity.class);
                 break;
             case R.id.btnRecyclerViewScreen:
-                intent = new Intent(this, RecyclerViewActivity.class);
+                intent = new Intent(this, RecyclerViewExamplesActivity.class);
                 break;
         }
 

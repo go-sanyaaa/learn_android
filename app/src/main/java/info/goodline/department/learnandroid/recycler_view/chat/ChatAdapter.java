@@ -1,4 +1,4 @@
-package info.goodline.department.learnandroid;
+package info.goodline.department.learnandroid.recycler_view.chat;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+
+import info.goodline.department.learnandroid.R;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
 

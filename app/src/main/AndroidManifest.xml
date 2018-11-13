@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="info.goodline.department.learnandroid">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,8 +28,13 @@
         <activity android:name=".UserListFragmentActivity" />
         <activity android:name=".UserListActivity" />
         <activity android:name=".CommentsActivity" />
-        <activity android:name=".RecyclerViewActivity"
-            android:theme="@style/RecyclerViewTheme"/>
+        <activity
+            android:name=".recycler_view.chat.ChatListActivity"
+            android:theme="@style/RecyclerViewTheme" />
+        <activity
+            android:name=".recycler_view.google_play.GooglePlayActivity"
+            android:theme="@style/GooglePlayTheme" />
+        <activity android:name=".recycler_view.RecyclerViewExamplesActivity"></activity>
     </application>
 
 </manifest>

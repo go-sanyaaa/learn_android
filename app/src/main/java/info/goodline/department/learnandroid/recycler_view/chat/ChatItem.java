@@ -1,4 +1,4 @@
-package info.goodline.department.learnandroid;
+package info.goodline.department.learnandroid.recycler_view.chat;
 
 public class ChatItem {
 

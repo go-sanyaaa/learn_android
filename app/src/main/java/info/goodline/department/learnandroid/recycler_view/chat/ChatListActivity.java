@@ -1,4 +1,4 @@
-package info.goodline.department.learnandroid;
+package info.goodline.department.learnandroid.recycler_view.chat;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,12 +14,15 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewActivity extends AppCompatActivity implements ChatAdapter.onItemClickListener {
+import info.goodline.department.learnandroid.DataBaseHelper;
+import info.goodline.department.learnandroid.R;
+
+public class ChatListActivity extends AppCompatActivity implements ChatAdapter.onItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycler_view);
+        setContentView(R.layout.activity_chat_list);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -1,10 +1,12 @@
-package info.goodline.department.learnandroid;
+package info.goodline.department.learnandroid.recycler_view.chat;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import info.goodline.department.learnandroid.R;
 
 public class ChatVH extends RecyclerView.ViewHolder {
 
