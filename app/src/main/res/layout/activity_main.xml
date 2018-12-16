@@ -99,6 +99,14 @@
                 android:text="RecyclerView"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btnImagePickScreen"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="Выбор изображений"
+                android:textAllCaps="false" />
+
 
 
         </LinearLayout>

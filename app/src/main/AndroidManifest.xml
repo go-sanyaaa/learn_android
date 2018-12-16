@@ -34,7 +34,8 @@
         <activity
             android:name=".recycler_view.google_play.GooglePlayActivity"
             android:theme="@style/GooglePlayTheme" />
-        <activity android:name=".recycler_view.RecyclerViewExamplesActivity"></activity>
+        <activity android:name=".recycler_view.RecyclerViewExamplesActivity" />
+        <activity android:name=".image.ImagePickActivity" />
     </application>
 
 </manifest>
