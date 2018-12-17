@@ -21,5 +21,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_choose_image">Выбрать изображение</string>
+    <string name="button_open_camera">Сфотографировать</string>
+
+    <string-array name="attachment_variants">
+        <item>Выбрать из галереи</item>
+        <item>Сделать снимок</item>
+    </string-array>
 
 </resources>
