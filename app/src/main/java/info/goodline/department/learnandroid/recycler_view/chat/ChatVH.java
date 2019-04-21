@@ -20,7 +20,7 @@ public class ChatVH extends RecyclerView.ViewHolder {
         super(itemView);
         ivAvatar = itemView.findViewById(R.id.ivAvatar);
         tvChatTheme = itemView.findViewById(R.id.tvChatTheme);
-        tvUserName = itemView.findViewById(R.id.tvUserName);
+//        tvUserName = itemView.findViewById(R.id.tvUserName);
         tvMessage = itemView.findViewById(R.id.tvMessage);
 
     }

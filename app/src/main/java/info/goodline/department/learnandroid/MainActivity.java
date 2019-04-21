@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import info.goodline.department.learnandroid.image.ImagePickActivity;
+import info.goodline.department.learnandroid.local_storage.ChatListActivityKT;
 import info.goodline.department.learnandroid.recycler_view.RecyclerViewExamplesActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnWidgetsScreen).setOnClickListener(this);
         findViewById(R.id.btnFragmentScreen).setOnClickListener(this);
         findViewById(R.id.btnRecyclerViewScreen).setOnClickListener(this);
+        findViewById(R.id.btnLocalStorage).setOnClickListener(this);
         findViewById(R.id.btnImagePickScreen).setOnClickListener(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -65,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnRecyclerViewScreen:
                 intent = new Intent(this, RecyclerViewExamplesActivity.class);
+                break;
+            case R.id.btnLocalStorage:
+                intent = new Intent(this, ChatListActivityKT.class);
                 break;
             case R.id.btnImagePickScreen:
                 intent = new Intent(this, ImagePickActivity.class);

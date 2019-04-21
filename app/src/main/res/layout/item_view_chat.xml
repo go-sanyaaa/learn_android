@@ -27,15 +27,6 @@
         android:textSize="16sp"
         tools:text="Birthday gift" />
 
-    <TextView
-        android:id="@+id/tvUserName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvChatTheme"
-        android:layout_toEndOf="@+id/ivAvatar"
-        android:textColor="#DE000000"
-        android:textSize="16sp"
-        tools:text="Sandra Adams " />
 
     <TextView
         android:id="@+id/tvMessage"
@@ -47,7 +38,7 @@
         android:maxLines="2"
         android:textColor="#61000000"
         android:textSize="16sp"
-        tools:text="                           — It’s the one week of the year in which you get the chance to take…" />
+        android:text="@string/last_message" />
 
     <View
         android:layout_width="match_parent"
