@@ -63,7 +63,7 @@ public class ChatListActivity extends AppCompatActivity implements ChatAdapter.o
     }
 
     @Override
-    public void onItemClick(ChatItem item) {
+    public void onItemClick(ChatItem item, int position) {
         Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
     }
 }

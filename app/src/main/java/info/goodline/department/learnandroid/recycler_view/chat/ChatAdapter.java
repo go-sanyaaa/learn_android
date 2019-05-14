@@ -17,8 +17,9 @@ import info.goodline.department.learnandroid.R;
 public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
 
     public interface onItemClickListener {
-        void onItemClick(ChatItem item);
+        void onItemClick(ChatItem item,int position);
     }
+
 
     private Context context;
     private onItemClickListener clickListener;
@@ -41,7 +42,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChatVH chatVH, int position) {
+    public void onBindViewHolder(@NonNull final ChatVH chatVH, final int position) {
         final ChatItem chatItem = chats.get(position);
         chatVH.ivAvatar.setImageResource(chatItem.getAvatar());
         chatVH.tvChatTheme.setText(chatItem.getTitle());
@@ -56,7 +57,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
         chatVH.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickListener.onItemClick(chatItem);
+//                clickListener.onItemClick(chatItem);
+                deleteItem(chatItem, chatVH.getAdapterPosition());
             }
         });
     }
@@ -73,9 +75,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatVH> {
      */
     public void insertItem(ChatItem item) {
         // Добавить экземпляр класса ChatItem в коллекцию объектов сразу после первого элемента.
-        chats.add(1, item);
+        chats.add(0, item);
         // Обновить адаптер. Вызывав этот метод, в списке recyclerView будет отрисовано добавление
         // нового элемента
-        notifyItemInserted(1);
+        notifyItemInserted(0);
+    }
+
+    public void deleteItem(ChatItem item, int position){
+        chats.remove(item);
+        notifyItemRemoved(position);
     }
 }
